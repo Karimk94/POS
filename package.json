@@ -1,0 +1,77 @@
+{
+  "name": "imad-store",
+  "version": "0.0.1",
+  "description": "",
+  "author": "Karim",
+  "private": true,
+  "main": "start.js",
+  "build": {
+    "artifactName": "imadStore",
+    "appId": "01",
+    "directories": {
+      "buildResources": "assets",
+      "output": "dist"
+    },
+    "extraResources": [
+      {
+        "from": "assets",
+        "to": "app/assets"
+      }
+    ],
+    "asar": "false",
+    "win": {
+      "target": "msi",
+      "icon": "assets/images/icon.ico"
+    }
+  },
+  "dependencies": {
+    "async": "^3.2.5",
+    "body-parser": "^1.20.2",
+    "btoa": "^1.2.1",
+    "electron-context-menu": "^3.6.1",
+    "electron-store": "^8.2.0",
+    "electron-winstaller": "^5.3.0",
+    "express": "^4.19.2",
+    "express-fileupload": "^1.5.0",
+    "html2canvas": "^1.4.1",
+    "http": "^0.0.1-security",
+    "https": "^1.0.0",
+    "is-port-reachable": "^4.0.0",
+    "jquery": "^3.7.1",
+    "jsbarcode": "^3.11.6",
+    "jspdf": "^2.5.1",
+    "macaddress": "^0.5.3",
+    "moment": "^2.30.1",
+    "multer": "^1.4.5-lts.1",
+    "nedb": "^1.8.0",
+    "path": "^0.12.7",
+    "print-js": "^1.6.0",
+    "socket.io": "^4.7.5",
+    "sweetalert2": "^11.10.7",
+    "xmlhttprequest": "^1.8.0"
+  },
+  "scripts": {
+    "electron": "cross-env NODE_ENV=dev nodemon --exec \"\"electron .\"\"",
+    "electron-build": "electron-builder",
+    "package-win": "electron-packager . imadStore --overwrite --asar=false --platform=win32 --arch=x64 --icon=assets/images/icon.ico --prune=true --out=release-builds --version-string.ProductName=\"imadStore\""
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "cross-env": "^6.0.3",
+    "electron": "^29.1.5",
+    "electron-builder": "^21.2.0",
+    "electron-is-dev": "^1.1.0",
+    "nodemon": "^3.1.0"
+  }
+}

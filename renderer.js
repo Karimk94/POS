@@ -1,0 +1,9 @@
+require('./assets/js/pos.js');
+require('./assets/js/product-filter.js');
+require('./assets/css/bootstrap.min.css');
+require('./assets/css/components.css');
+require('./assets/css/core.css');
+require('./assets/css/icons.css');
+require('./assets/css/pages.css');
+require('./assets/css/responsive.css');
+require('print-js');
